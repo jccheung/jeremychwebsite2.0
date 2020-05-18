@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!-------------------  Basic Page Needs ------------------------------>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jeremy Cheung's personal portfolio and website">
+    <meta name="author" content="Jeremy Cheung 2020">
+    <title>My Portfolio</title>
+
+   <!------------- Latest compiled and minified CSS --------------->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+	
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      
+      }
+    </style>
+    <!-- Custom styles for this template -->
+ 
+  </head>
+  
+  <body>
+  
+
+<header style="margin-top:50px;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-top" id="ftco-navbar">
+	<div class="container">
+		<a class="navbar-brand" href="../home.html">Jeremy Cheung</a>
+		<div class="collapse navbar-collapse navbar-header">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a href="../home.html" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="../about.html" class="nav-link">About Me</a></li>
+				<li class="nav-item"><a href="../home.html#Experience" class="nav-link">Experience</a></li>
+				<li class="nav-item"><a href="../home.html#Projects" class="nav-link">Projects</a></li>
+				<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="portfolio.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+				<div class="dropdown-menu" aria-labelledby="dropdown04">
+					<a class="dropdown-item" href="https://www.linkedin.com/in/jeremycheung111/"><img src="../static/linkedin.png" height="25" width="25">&nbsp;LinkedIn</a>
+					<a class="dropdown-item" href="https://github.com/jccheung"> <img src="../static/GitHub.png" height="25" width="25">&nbsp;Github</a>
+				</div>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+  <h2 style="margin-bottom:20px">Voice Recognition Assisted Living</h2>
+  &nbsp;
+  &nbsp;
+    <div class="container">
+   	 <div class="row">
+    	<div class="col-md-5">
+        	<img src="../static/butterfly.jpg" alt="" width="100%">
+   			&nbsp;
+   			<!-- img src="{{ job.image2.url }}" alt="" width="100%">
+   			&nbsp;
+   			<img src="" alt="" width="100%" -->
+   			&nbsp;
+    	</div>
+    	
+    	<div class="col-md-7">
+    	
+    		<div align="left">
+        	<h5>Objective:</h5>
+        		<p>
+				Developing my own household assistants controlled via voice or video recognition
+				</p>
+				<br>
+        	</div>
+        	<div align="left">
+        	<h5>Solution:</h5>
+        		<p>Starting this project small scale at a time, the first step was to test feasibility of control using an already existing voice recognition software and having my voice commands control a simple motor, which would mimic as an automatic door
+        		</p>
+			<br>
+        	</div>
+        	<div align="left">
+        	<h5>Implementation & Prototyping:</h5>
+        		<p>The motor and the hardware design was done with solidworks to build an attachment to the motor in order to increase surface area contact with the door. To interface and control the motor, i used an arduino. 
+        		<br>I programmed the arduino using python, which allowed me to write my voice recognition algorithm and import libraries to control the arduino without having to use other software.
+ 				<br>
+ 				<br>
+        		For prototpying purposes, I used AWS transcribe, which would listen to voice commands and return the data via an S3 bucket as text.
+        		<br><br>From there I would be able to make a request to the S3 bucket to retrieve the plain text of the voice command, and then use python to determine if the command was telling the motor to open the door or close it.
+        		<br>Then it would send the command to the arduino and motor to move it.
+				</p>
+        		<br>
+        	</div>
+        	<div align="left">
+        	<h5>Future Work:</h5>
+        		<p>This is merely the first step in voice assisted living services.
+					<br><br>In order to decrease response time, future steps would include using simple algorithm software to detect and return simple voice commands directly in python which would allow for no internet usage of the hardware.
+					<br>In addition, being able to filter background noise would be beneficial to increasing accuracy of the system.
+					<br><br>
+					This project is a work in progress. Updates will follow.
+				</p>
+				<br>
+        	</div>
+        		
+        	<h5>Technology used:</h5>
+       	 	<p>Python, Eclipse, Arduino, Solidworks, AWS S3, Transcribe, Selenium </p>
+        	<hr>
+        	
+        	<div class="post_footer">Last Updated on: April 20 2020</div>
+    		<br>    
+			<a href="../home.html" class="btn btn-primary my-2">Back</a> &nbsp;
+    	</div>
+    	
+	  </div>
+	 </div>
+   </section>
+
+
+<section style="margin-top:80px">
+<h1 class="text-center" id="jobslink">Additional Projects</h1>
+  <div class="album py-5 bg-light">
+    <div class="container">
+	<div class="row">
+        
+		 <div class="col-md-4">
+			<a href="ex1.html">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="../static/website.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Using python and django to build this personal portfolio website</p>
+                   <div class="d-flex justify-content-between align-items-center">
+                	<small class="text-muted">Uploaded April 20 2020</small>
+              		</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+ 
+            <div class="col-md-4">
+			<a href="ex2.html">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="../static/mech.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Designed and built a custom drone frame for a personal drone project</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                	<small class="text-muted">Uploaded April 20 2020</small>
+              		</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <div class="col-md-4">
+			<a href="ex3.html">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="../static/robot.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Built a voice activated control system to open doors, and complete simple tasks</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                	<small class="text-muted">Uploaded April 20 2020</small>
+              		</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+      </div>
+    </div>
+    
+</section>
+
+</main>
+<footer id="footer" style="margin-top:50px">
+  	<div class="container">
+          <div class="col-md-12 mb-5">           
+              <h2 class="h2 text-black mb-5 text-center" >Contact Me</h2> 
+            <div class="col text-center" style="margin-top:-40px; margin-bottom:70px">
+            <a href="https://www.linkedin.com/in/jeremycheung111/"> <img src="../static/linkedin.png" height="50" width="50"></img></a> 
+            &nbsp;
+            <a href="https://github.com/jccheung"> <img src="../static/GitHub.png" height="50" width="50"></img></a>
+          	
+          	</div>
+          </div>
+          </div>
+ 
+ <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+		<div class="footer-section-content">
+    	<span style="footer-fi"><a href="#">Back to top</a></span>
+	  	<div class="footer-bottom-center"><br>
+	  		<p style="color:gray;font-size:12px;">Jeremy Cheung 2020 &copy;</p>
+	  	</div>
+	</div>
+	</div>
+</nav>
+
+  	
+  	
+</footer>
+</html>
